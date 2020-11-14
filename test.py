@@ -1,5 +1,6 @@
 
-directions = [(0,1),(1,0),(0,-1),(-1,0)]
+def hi(a,b):
+    return a,b
 
-for dx,dy in directions:
-    print(dx, dy)
+x, y = hi(1,3)
+print(x, y)
