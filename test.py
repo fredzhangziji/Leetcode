@@ -1,6 +1,8 @@
+a = [1,2,3,4,5]
 
-def hi(a,b):
-    return a,b
+b = [0]*len(a)
 
-x, y = hi(1,3)
-print(x, y)
+for i in range(len(a)):
+    b[i-3] = a[i]
+
+print(b)
