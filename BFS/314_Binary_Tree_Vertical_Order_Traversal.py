@@ -40,7 +40,7 @@ class Solution:
         
         # 把答案的list构建好，这样之后就只需要往对应的位置加答案就行了
         res = []
-        for i in range(minIndex, maxIndex+1):
+        for _ in range(minIndex, maxIndex+1):
             res.append([])
         
         queue = collections.deque() # 创建queue为bfs作准备
