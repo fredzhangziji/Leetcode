@@ -1,8 +1,7 @@
-a = [1,2,3,4,5]
+import bisect
 
-b = [0]*len(a)
+a = [1,2,3,4,5,7]
 
-for i in range(len(a)):
-    b[i-3] = a[i]
-
-print(b)
+i = bisect.bisect(a,6)
+a.insert(i, 6)
+print(a, i)
