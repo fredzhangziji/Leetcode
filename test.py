@@ -1,7 +1,13 @@
-import bisect
+import sys
 
-a = [1,2,3,4,5,7]
+n = sys.stdin.readline().strip()
+ans = 0
+for i in range(int(n)):
+    line = sys.stdin.readline().strip()
 
-i = bisect.bisect(a,6)
-a.insert(i, 6)
-print(a, i)
+    values = map(int, line.split())
+    print(values)
+    # for v in values:
+    #     ans += v
+
+print(ans)
