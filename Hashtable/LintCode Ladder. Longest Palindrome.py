@@ -1,3 +1,5 @@
+import collections
+
 class Solution:
     """
     @param s: a string which consists of lowercase or uppercase letters
