@@ -13,6 +13,7 @@ class Solution:
     @param root: A Tree
     @return: Level order a list of lists of integer
     """
+
     def levelOrder(self, root):
         # write your code here
         if not root:
@@ -55,5 +56,32 @@ class Solution:
 #                     next_queue.append(currNode.right)
 #             queue = next_queue
 #             res.append(tmpres)
+        
+#         return res
+
+#     def levelOrder(self, root):
+#         # write your code here
+#         if not root:
+#             return []
+        
+#         # dummyNode
+#         queue = collections.deque([root, None])
+#         res = []
+#         tmpres = []
+        
+#         while queue:
+#             currNode = queue.popleft()
+#             if currNode: # not dummyNode
+#                 tmpres.append(currNode.val)
+#                 if currNode.left:
+#                     queue.append(currNode.left)
+#                 if currNode.right:
+#                     queue.append(currNode.right)
+#             else: # dummyNode
+#                 res.append(tmpres)
+#                 tmpres = []
+#                 if queue:
+#                     queue.append(None)
+
         
 #         return res
