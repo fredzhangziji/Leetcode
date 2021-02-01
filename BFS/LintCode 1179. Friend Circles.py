@@ -1,3 +1,4 @@
+import collections
 class Solution:
     """
     @param M: a matrix
