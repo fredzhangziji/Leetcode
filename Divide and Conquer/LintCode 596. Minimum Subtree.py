@@ -15,7 +15,7 @@ class Solution:
     """
     def findSubtree(self, root):
         # write your code here
-        sum, min_sum, min_subtree = self.divideAndConquer(root)
+        _, _, min_subtree = self.divideAndConquer(root)
         return min_subtree
         
     def divideAndConquer(self, root):
