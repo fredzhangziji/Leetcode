@@ -16,6 +16,7 @@ bool isIsomorphic(char * s, char * t){
     
     for (int i = 0; i < strlen(s); i++) {
         if (dict[s[i]] == 0) { // first time, map the char to the char in t
+            // check if this t[i] already had a mapping
             for (int j = 0; j < strlen(s); j++) {
                 if (dict[s[j]] == t[i]) {
                     return false;
