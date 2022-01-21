@@ -27,7 +27,7 @@ void helper(struct TreeNode* root, int* res, int* i) {
 int* inorderTraversal(struct TreeNode* root, int* returnSize){
     int *res = (int*)malloc(100 * sizeof(int));
     *returnSize = 0;
-    helper(root, res, returnSize);
+    helper(root, res, returnSize); // helper(root, &res[0], returnSize);
     return res;
 }
 
