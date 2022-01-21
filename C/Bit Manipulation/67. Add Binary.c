@@ -4,7 +4,7 @@ char * addBinary(char * a, char * b){
     int lenA = strlen(a);
     int lenB = strlen(b);
     int lenC = lenA > lenB ? lenA : lenB;
-    lenC += 2;
+    lenC += 2; // one for '\0', and one for possible carry
     int tmp = 0;
     
     char *res = (char*)malloc(sizeof(char) * lenC);
@@ -33,6 +33,7 @@ char * addBinary(char * a, char * b){
         tmp /= 2; // get the carry if there is any
         lenC--;
     }
+    // if there is no carry for the whole number, return the address + 1 to avoid the first 0
     if (res[0] == '0') {
         return res + 1;
     }
