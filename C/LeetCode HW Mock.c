@@ -1,3 +1,6 @@
+// Problem link
+// https://www.notion.so/LeetCode-HW-Mock-37a0c81fede14c239c05e7a1a7074d78
+
 typedef struct {
     int id[1001];
     int timeStamp[1001];
