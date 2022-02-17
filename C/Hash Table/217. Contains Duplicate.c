@@ -15,6 +15,8 @@ bool containsDuplicate(int* nums, int numsSize)
     
     /* iterate through the list */
     for (int i = 0; i < numsSize; i++) {
+        // if it doesn't find the num, then element will be null
+        // if it finds the num, then element will be something
         HASH_FIND_INT(hashtable, &nums[i], element);
         if (element) {          // if it exists
             // free the memory
@@ -26,7 +28,7 @@ bool containsDuplicate(int* nums, int numsSize)
             element = (struct NumsDict*)malloc(sizeof(struct NumsDict));
             element->num = nums[i];
             element->count = 1;
-            HASH_ADD_INT(hashtable, num, element);
+            HASH_ADD_INT(hashtable, num, element); // (hashtable pointer, key name, struct pointer)
         }
     }
     return false;
