@@ -5,6 +5,7 @@ int Find(int n)
     if (n == p[n]) {
         return n;
     } else {
+        // find it's connected part
         p[n] = Find(p[n]);
         return p[n];
     }
@@ -14,6 +15,8 @@ void Join(int a, int b, int *n)
 {
     int aa = Find(a);
     int bb = Find(b);
+    
+    // means they are already connected
     if (aa == bb) {
         return; 
     } else {
