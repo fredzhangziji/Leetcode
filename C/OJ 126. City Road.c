@@ -20,6 +20,8 @@ void Join(int a, int b, int *n)
         // if there is a bridge
         // update the 并查集 and update the answer
         p[aa] = bb;
+        
+        // n here means the no. disjointed islands 
         *n = *n - 1;
     }
 }
@@ -45,6 +47,7 @@ int main()
         m--;
     }
     
+    // n here means the no. disjointed islands 
     printf("%d", n - 1);
     
     return 0;
