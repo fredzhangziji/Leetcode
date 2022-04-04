@@ -14,6 +14,9 @@ int romanToInt(char * s){
     int res = 0;
     // when the string pointer is not pointing to the end of the string
     while (*s != '\0') {
+        // 如果是和结束符'\0'比的话，任何字符都比结束符大。
+        // 所以不用担心到了最后一个字符怎么比，到了最后一个字符
+        // 直接会进入else语句
         if (table[*s] < table[*(s+1)]) {
             res -= table[*s];
         } else {
