@@ -3,8 +3,8 @@
 
 int main() 
 {
-      if ('a' > '\0'){
-            printf("hi");
-      }
-      return 0;
+      long a = 21474836460;
+      printf("%d\n", INT_MAX);
+      printf("%lld\n", a);
+      printf("%d", a > INT_MAX);
 }
